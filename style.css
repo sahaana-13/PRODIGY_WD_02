@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #e0f7fa;
+  --text-color: #000;
+  --card-color: rgba(255, 255, 255, 0.8);
+  --btn-bg: #008cba;
+  --btn-hover: #005f73;
+  --lap-border: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --card-color: rgba(255, 255, 255, 0.05);
+  --btn-bg: #bb86fc;
+  --btn-hover: #985eff;
+  --lap-border: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.container {
+  background-color: var(--card-color);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 340px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#display {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  margin-bottom: 1rem;
+}
+
+button {
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--btn-bg);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#lapList {
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#lapList li {
+  padding: 6px;
+  border-bottom: 1px solid var(--lap-border);
+}
